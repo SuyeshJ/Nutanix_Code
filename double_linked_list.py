@@ -155,9 +155,11 @@ class List:
         '''
         if index >= (self.len-1):
             self.remove_at_tail()
+            return True
             
         elif index <= 0-(self.len):
             self.remove_at_head()
+            return True
             
         else:
             this = self.head
