@@ -98,10 +98,10 @@ class List:
         1. If an out-of-bound ( less than -10) -ve index is given, then the insertion will happen at head of the list
         2. if an out-of-bound (greater than 9) +ve index is given, then the insertion will happen at  end of the list
         '''
-        if index >= (self.len-1):
+        if index >= (self.len-1) or index == -1:
             self.append(data)
             
-        elif index <= 0-(self.len):
+        elif index <= 0-(self.len) or index == 0:
             self.insert_at_head(data)
             
         else:
@@ -153,11 +153,11 @@ class List:
         Support for zero, positive and negative index
         Support for out-of-bound index
         '''
-        if index >= (self.len-1):
+        if index >= (self.len-1) or index == -1:
             self.remove_at_tail()
             return True
             
-        elif index <= 0-(self.len):
+        elif index <= 0-(self.len) or index == 0:
             self.remove_at_head()
             return True
             
